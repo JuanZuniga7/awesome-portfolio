@@ -6,7 +6,7 @@ const card = getCard();
 
 <div
   id="card"
-  class="pt-8 pb-5 px-5 flex flex-col items-center gap-10 bg-secondary w-full rounded-2xl"
+  class="pt-8 pb-5 px-5 flex flex-col items-center gap-5 bg-secondary w-full rounded-2xl"
 >
   <figure class="select-none relative">
     <div class="w-56 h-56 rounded-full absolute z-10"/>
@@ -18,7 +18,7 @@ const card = getCard();
       class="w-56 h-56 rounded-full"
     />
   </figure>
-  <nav class="w-full">
+  <nav class="w-full px-5">
     <ul class="flex flex-col gap-0.5">
       {
         card.nav.map((item) => (
@@ -37,7 +37,7 @@ const card = getCard();
       }
     </ul>
   </nav>
-  <ul class="flex items-center px-4 py-2 justify-around w-full bg-primary rounded-xl">
+  <ul class="flex items-center p-2 justify-around w-full bg-primary rounded-xl">
     {card.social.map((item) => (
       <li>
         <a

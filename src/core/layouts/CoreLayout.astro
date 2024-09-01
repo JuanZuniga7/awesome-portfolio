@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import Aside from '../sections/Aside.astro';
+import Footer from '../sections/Footer.astro';
 interface Props{
 	title: string;
 	lang: string;
@@ -19,11 +20,12 @@ const { title, lang } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-5">
-		<div class="w-[65%] grid grid-cols-4 h-fit gap-5">
+	<body class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-6">
+		<div class="w-[70%] grid grid-cols-4 h-fit gap-10 text-white">
 			<Aside lang={lang} />
-			<main class="col-span-3">
+			<main class="col-span-3 flex flex-col items-center gap-10">
 				<slot/>
+				<Footer/>
 			</main>
 		</div>
 	</body>

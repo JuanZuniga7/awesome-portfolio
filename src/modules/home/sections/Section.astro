@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import wall from "../../home/assets/images/wall.png";
+---
+
+<div class="w-full rounded-2xl relative">
+  <section
+    id="section"
+    class="w-full min-h-full h-fit rounded-xl transition-all duration-500 bg-secondary"
+  >
+    <Image
+      id="image"
+      src={wall}
+      alt="Wallpaper"
+      width={1920}
+      height={1080}
+      class="w-full rounded-t-2xl"
+    />
+    <article class="w-full py-10 px-5 text-4xl">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </article>
+  </section>
+</div>
