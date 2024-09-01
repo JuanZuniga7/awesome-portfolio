@@ -1,0 +1,35 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Aside from '../sections/Aside.astro';
+interface Props{
+	title: string;
+	lang: string;
+}
+const { title, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-5">
+		<div class="w-[65%] grid grid-cols-4 h-fit gap-5">
+			<Aside lang={lang} />
+			<main class="col-span-3">
+				<slot/>
+			</main>
+		</div>
+	</body>
+</html>
+<style>
+	html{
+		scroll-behavior: smooth;
+	}
+</style>

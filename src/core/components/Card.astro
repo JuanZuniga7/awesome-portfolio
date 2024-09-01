@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import getCard from "../data/card.ts";
+const card = getCard();
+---
+
+<div
+  id="card"
+  class="pt-8 pb-5 px-5 flex flex-col items-center gap-10 bg-secondary w-full rounded-2xl"
+>
+  <figure class="select-none relative">
+    <div class="w-56 h-56 rounded-full absolute z-10"/>
+    <Image
+      src={card.profile.path}
+      alt={card.profile.alt}
+      width={800}
+      height={800}
+      class="w-56 h-56 rounded-full"
+    />
+  </figure>
+  <nav class="w-full">
+    <ul class="flex flex-col gap-0.5">
+      {
+        card.nav.map((item) => (
+          <li>
+            <a
+              href={item.path}
+              class="text-white flex gap-4 items-center text-lg font-sans font-semibold px-5 py-2 rounded-xl hover:bg-tertiary"
+            >
+              <figure class="w-5 h-5">
+                <item.icon />
+              </figure>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <ul class="flex items-center px-4 py-2 justify-around w-full bg-primary rounded-xl">
+    {card.social.map((item) => (
+      <li>
+        <a
+          href={item.path}
+          class="text-white"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <figure class="w-8 h-8 hover:bg-tertiary p-1.5 rounded-xl">
+            <item.icon />
+          </figure>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
