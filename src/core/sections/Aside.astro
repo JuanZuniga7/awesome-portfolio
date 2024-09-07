@@ -1,8 +1,7 @@
 ---
 import Card from '../components/Card.astro';
-import Categories from '../components/Categories.astro';
 ---
-<aside class="w-full h-fit flex flex-col gap-10">
-    <Card/>
-    <Categories />
+<aside class="sticky top-6 w-full h-fit flex flex-col gap-10">
+	<Card/>
+	<slot/>
 </aside>

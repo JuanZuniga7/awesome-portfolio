@@ -22,7 +22,9 @@ const { title, lang } = Astro.props;
 	</head>
 	<body class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-6">
 		<div class="w-[70%] grid grid-cols-4 h-fit gap-10 text-white">
-			<Aside lang={lang} />
+			<Aside>
+				<slot name="aside"/>
+			</Aside>
 			<main class="col-span-3 flex flex-col items-center gap-10">
 				<slot/>
 				<Footer/>
