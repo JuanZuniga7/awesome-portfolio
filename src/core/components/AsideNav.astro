@@ -1,18 +1,25 @@
 ---
-import type ILink from '../data/interfaces/ILink'
+import type ILink from "../data/interfaces/ILink";
 interface Props {
-	title: string
-	data: ILink[]
+	title: string;
+	data: ILink[];
 }
-const {data, title} = Astro.props;
+const { data, title } = Astro.props;
 ---
-<nav class="w-full flex flex-col items-center gap-2 p-4 rounded-2xl bg-secondary">
+
+<nav
+	class="w-full flex flex-col items-center gap-2 p-4 rounded-2xl bg-secondary"
+>
 	<h4 class="font-mono text-base uppercase">{title}</h4>
 	<ul class="w-full flex flex-wrap items-center justify-around gap-2">
-		{data.map((link) => (
-			<li class="w-fit flex items-center px-4 py-1.5 rounded-lg bg-primary hover:bg-tertiary justify-center">
-				<a href={link.path} class="capitalize font-mono text-sm">{link.label}</a>
-			</li>
-		))}
+		{
+			data.map((link) => (
+				<li class="w-fit flex items-center px-4 py-1.5 rounded-lg bg-primary hover:bg-tertiary justify-center">
+					<a href={link.path} class="capitalize font-mono text-sm">
+						{link.label}
+					</a>
+				</li>
+			))
+		}
 	</ul>
 </nav>

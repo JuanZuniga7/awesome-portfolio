@@ -1,15 +1,19 @@
 ---
-import CoreLayout from '../core/layouts/CoreLayout.astro'
-import Header from '../modules/home/sections/Header.astro'
-import Section from '../modules/home/sections/Section.astro'
-import AsideNav from '../core/components/AsideNav.astro'
-import asideNav from '../modules/home/data/asideNav'
-import AsideContainer from "../core/sections/AsideContainer.astro"
+import CoreLayout from "../core/layouts/CoreLayout.astro";
+import Header from "../modules/home/sections/Header.astro";
+import Section from "../modules/home/sections/Section.astro";
+import AsideNav from "../core/components/AsideNav.astro";
+import asideNav from "../modules/home/data/asideNav";
+import AsideContainer from "../core/sections/AsideContainer.astro";
+import Resume from "../modules/home/sections/Resume.astro";
 ---
-<CoreLayout title="Juan Zuniga" lang='en'>
+
+<CoreLayout title="Juan Zuniga" lang="en">
 	<AsideContainer slot="aside">
-		<AsideNav title='go to' data={asideNav}/>
+		<AsideNav title="go to" data={asideNav} />
 	</AsideContainer>
-  <Header/>
-	<Section/>
+	<Header />
+	<Section>
+		<Resume />
+	</Section>
 </CoreLayout>
