@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import Aside from '../sections/Aside.astro';
 import Footer from '../sections/Footer.astro';
+import ToTop from "../components/ToTop.astro"
 interface Props{
 	title: string;
 	lang: string;
@@ -29,6 +30,7 @@ const { title, lang } = Astro.props;
 				<slot/>
 				<Footer/>
 			</main>
+			<ToTop/>
 		</div>
 	</body>
 </html>

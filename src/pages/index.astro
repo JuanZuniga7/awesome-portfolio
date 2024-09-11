@@ -4,9 +4,12 @@ import Header from '../modules/home/sections/Header.astro'
 import Section from '../modules/home/sections/Section.astro'
 import AsideNav from '../core/components/AsideNav.astro'
 import asideNav from '../modules/home/data/asideNav'
+import AsideContainer from "../core/sections/AsideContainer.astro"
 ---
 <CoreLayout title="Juan Zuniga" lang='en'>
-	<AsideNav slot='aside' title='go to' data={asideNav}/>
+	<AsideContainer slot="aside">
+		<AsideNav title='go to' data={asideNav}/>
+	</AsideContainer>
   <Header/>
 	<Section/>
 </CoreLayout>

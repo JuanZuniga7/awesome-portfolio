@@ -1,0 +1,14 @@
+---
+import Arrow from "../assets/icons/arrow.astro"
+---
+<div id="toTop" class="fixed bottom-5 right-5 w-10 h-10 rounded-xl bg-secondary hover:bg-tertiary cursor-pointer flex items-center justify-center">
+	<figure class="text-white w-8 h-8">
+			<Arrow/>
+	</figure>
+</div>
+<script>
+	const toTop = document.getElementById('toTop');
+	toTop?.addEventListener('click', () => {
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+	});
+</script>
