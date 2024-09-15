@@ -1,19 +1,14 @@
 ---
 import CoreLayout from "../core/layouts/CoreLayout.astro";
-import Header from "../modules/home/sections/Header.astro";
-import Section from "../modules/home/sections/Section.astro";
 import AsideNav from "../core/components/AsideNav.astro";
 import asideNav from "../modules/home/data/asideNav";
 import AsideContainer from "../core/sections/AsideContainer.astro";
-import Resume from "../modules/home/sections/Resume.astro";
+import Home from "../modules/home/Home.astro";
 ---
 
 <CoreLayout title="Juan Zuniga" lang="en">
 	<AsideContainer slot="aside">
 		<AsideNav title="go to" data={asideNav} />
 	</AsideContainer>
-	<Header />
-	<Section>
-		<Resume />
-	</Section>
+	<Home/>
 </CoreLayout>
