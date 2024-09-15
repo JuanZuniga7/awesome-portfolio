@@ -1,41 +1,43 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Aside from '../sections/Aside.astro';
-import Footer from '../sections/Footer.astro';
-import ToTop from "../components/ToTop.astro"
-interface Props{
-	title: string;
-	lang: string;
+import { ViewTransitions } from "astro:transitions";
+import Aside from "../sections/Aside.astro";
+import Footer from "../sections/Footer.astro";
+import ToTop from "../components/ToTop.astro";
+interface Props {
+  title: string;
+  lang: string;
 }
 const { title, lang } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-6">
-		<div class="w-[70%] grid grid-cols-4 h-fit gap-10 text-white">
-			<Aside>
-				<slot name="aside"/>
-			</Aside>
-			<main class="col-span-3 flex flex-col items-center gap-10">
-				<slot/>
-				<Footer/>
-			</main>
-			<ToTop/>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body
+    class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-6"
+  >
+    <div class="w-[70%] grid grid-cols-4 h-fit gap-10 text-white">
+      <Aside>
+        <slot name="aside" />
+      </Aside>
+      <main class="col-span-3 flex flex-col items-center gap-10">
+        <slot />
+        <Footer />
+      </main>
+      <ToTop />
+    </div>
+  </body>
 </html>
 <style>
-	html{
-		scroll-behavior: smooth;
-	}
+  html {
+    scroll-behavior: smooth;
+  } 
 </style>

@@ -1,3 +1,10 @@
-<article class="w-full h-fit py-10 px-5 text-base">
+---
+interface Props{
+	id: string
+}
+const {id} = Astro.props;
+---
+
+<article id={id} class="w-full h-fit py-10 px-5 text-base">
 	<slot/>
 </article>

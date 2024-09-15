@@ -1,3 +1,14 @@
-<div class="flex">
-    
-</div>
+---
+import { ILine } from "../data/interface/ICode";
+import Line from "./Line.astro";
+interface Props {
+  lines: ILine[];
+}
+const { lines } = Astro.props;
+---
+
+<ul class="flex flex-col w-full font-mono">
+    {lines.map((line, index) => 
+        <Line index={index} line={line} />
+    )}
+</ul>
