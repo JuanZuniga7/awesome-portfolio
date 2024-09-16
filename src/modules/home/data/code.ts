@@ -8,46 +8,61 @@ enum Colors {
 }
 
 const code: ICode = {
-  title: "AlternativeNavigation",
+  title: "NewInterfacesAndClasses",
   lines: [
     {
       words: [
         { content: "interface", color: Colors.Purple },
-        { content: "IBackend", color: Colors.Amber },
+        { content: "IFullStack", color: Colors.Amber },
+        { content: ":", color: Colors.White },
+        { content: "IBackend", color: Colors.Amber, complement: [
+          { content: ",", color: Colors.White },
+        ]},
+        { content: "IFrontend", color: Colors.Amber, complement: [
+          { content: ";", color: Colors.White },
+        ]},
       ],
-      link: "/about/skills#backend"
+    },
+    {
+      words: [
+        { content: "interface", color: Colors.Purple },
+        { content: "ISystemEngineer", color: Colors.Amber },
+      ],
     },
     { words: [{ content: "{", color: Colors.White }] },
     {
       words: [
         { content: "tab", color: "" },
-        { content: "int", color: Colors.Purple },
-        { content: "BackendExperienceYears", color: Colors.StrongAmber },
+        { content: "LinkedList", color: Colors.Purple },
+        {
+          content: "<",
+          color: Colors.White,
+          complement: [
+            { content: "ISkill", color: Colors.Amber },
+            { content: ">", color: Colors.White },
+          ],
+        },
+        { content: "SoftSkills", color: Colors.StrongAmber },
         { content: " { get; set; }", color: Colors.White },
       ],
     },
     {
       words: [
         { content: "tab", color: "" },
-        {
-          content: "LinkedList",
-          color: Colors.Purple,
-        },
+        { content: "LinkedList", color: Colors.Purple },
         {
           content: "<",
           color: Colors.White,
           complement: [
-            { content: "string", color: Colors.Amber },
+            { content: "ISkill", color: Colors.Amber },
             { content: ">", color: Colors.White },
           ],
         },
-        { content: "BackendLanguages", color: Colors.StrongAmber },
+        { content: "HardSkills", color: Colors.StrongAmber },
         { content: " { get; set; }", color: Colors.White },
       ],
     },
-    {
-      words: [{ content: "}", color: Colors.White }],
-    },
+    { words: [{ content: "}", color: Colors.White }] },
     {
       words: [
         { content: "public record", color: Colors.Purple },
@@ -56,29 +71,29 @@ const code: ICode = {
         { content: "string", color: Colors.Purple },
         { content: "Name", color: Colors.StrongAmber },
         { content: ",", color: Colors.White },
-        { content: "DateOnly", color: Colors.Purple },
-        { content: "Birthday", color: Colors.StrongAmber },
-        { content: ",", color: Colors.White },
         { content: "string", color: Colors.Purple },
-        { content: "Country", color: Colors.StrongAmber },
+        { content: "Email", color: Colors.StrongAmber },
+        { content: ",", color: Colors.White },
+        { content: "DateOnly", color: Colors.Purple },
+        { content: "Birthdate", color: Colors.StrongAmber },
         { content: ");", color: Colors.White },
       ],
     },
     {
       words: [
         { content: "public class", color: Colors.Purple },
-        { content: "SystemEngineer", color: Colors.Amber },
+        { content: "JuanZuniga", color: Colors.Amber },
         { content: "(", color: Colors.White },
         { content: "Person", color: Colors.Purple },
         { content: "person", color: Colors.StrongAmber },
         { content: ")", color: Colors.White },
         { content: ":", color: Colors.White },
-        { content: "IBackend", color: Colors.Amber },
+        { content: "IFullStack", color: Colors.Amber },
+        { content: ",", color: Colors.White },
+        { content: "ISystemEngineer", color: Colors.Amber },
       ],
     },
-    {
-      words: [{ content: "{", color: Colors.White }],
-    },
+    { words: [{ content: "{", color: Colors.White }] },
     {
       words: [
         { content: "tab", color: "" },
@@ -95,18 +110,73 @@ const code: ICode = {
           content: "<",
           color: Colors.White,
           complement: [
-            { content: "string", color: Colors.Amber },
+            { content: "ITechnology", color: Colors.Amber },
             { content: ">", color: Colors.White },
           ],
         },
-        { content: "BackendLanguages", color: Colors.StrongAmber },
+        { content: "BackendFrameworks", color: Colors.StrongAmber },
         { content: " { get; set; }", color: Colors.White },
       ],
     },
     {
-      words: [{ content: "}", color: Colors.White }],
+      words: [
+        { content: "tab", color: "" },
+        { content: "public int", color: Colors.Purple },
+        { content: "FrontendExperienceYears", color: Colors.StrongAmber },
+        { content: " { get; set; }", color: Colors.White },
+      ],
     },
+    {
+      words: [
+        { content: "tab", color: "" },
+        { content: "public LinkedList", color: Colors.Purple },
+        {
+          content: "<",
+          color: Colors.White,
+          complement: [
+            { content: "ITechnology", color: Colors.Amber },
+            { content: ">", color: Colors.White },
+          ],
+        },
+        { content: "FrontendFrameworks", color: Colors.StrongAmber },
+        { content: " { get; set; }", color: Colors.White },
+      ],
+    },
+    {
+      words: [
+        { content: "tab", color: "" },
+        { content: "public LinkedList", color: Colors.Purple },
+        {
+          content: "<",
+          color: Colors.White,
+          complement: [
+            { content: "ISkill", color: Colors.Amber },
+            { content: ">", color: Colors.White },
+          ],
+        },
+        { content: "SoftSkills", color: Colors.StrongAmber },
+        { content: " { get; set; }", color: Colors.White },
+      ],
+    },
+    {
+      words: [
+        { content: "tab", color: "" },
+        { content: "public LinkedList", color: Colors.Purple },
+        {
+          content: "<",
+          color: Colors.White,
+          complement: [
+            { content: "ISkill", color: Colors.Amber },
+            { content: ">", color: Colors.White },
+          ],
+        },
+        { content: "HardSkills", color: Colors.StrongAmber },
+        { content: " { get; set; }", color: Colors.White },
+      ],
+    },
+    { words: [{ content: "}", color: Colors.White }] },
   ],
 };
+
 
 export default code;
