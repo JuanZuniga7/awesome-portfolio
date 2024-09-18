@@ -8,7 +8,7 @@ enum Colors {
 }
 
 const code: ICode = {
-  title: "NewInterfacesAndClasses",
+  title: "AlternativeNavigation",
   lines: [
     {
       words: [

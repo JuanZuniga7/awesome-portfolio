@@ -1,0 +1,8 @@
+---
+import Articles from "../components/Articles.astro"
+import { getCollection } from "astro:content";
+const article = await getCollection("home");
+const data = article.find((item) => item.data.title === "About This Project")
+---
+<Articles id="AboutThisProject" title={data?.data.title}>
+</Articles>
