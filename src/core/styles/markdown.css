@@ -1,0 +1,134 @@
+.markdown {
+  line-height: 1.6; /* Improve readability */
+  font-size: 1rem; /* Adjust font size as needed */
+  color: #e0e0e0; /* Light text color for dark background */
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0; /* Lighter headings */
+}
+
+.markdown h1 {
+  font-size: 1.5rem; /* Adjust h1 size */
+}
+
+.markdown h2 {
+  font-size: 1.2rem; /* Adjust h2 size */
+}
+
+.markdown h3 {
+  font-size: 1rem; /* Adjust h3 size */
+}
+
+.markdown p {
+  margin-bottom: 0.8rem; /* Space between paragraphs */
+}
+
+.markdown em {
+  color: #3b82f6;
+}
+
+.markdown ul,
+.markdown ol {
+  margin-left: 1.5rem; /* Indent lists */
+  margin-bottom: 1rem; /* Space below lists */
+}
+
+.markdown li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  list-style-type: disc;
+}
+
+.markdown li::marker {
+  color: #4f46e5;
+}
+
+.markdown a {
+  color: #3b82f6; /* Tailwind blue-500 for dark mode */
+  text-decoration: underline;
+}
+
+.markdown a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.markdown blockquote {
+  border-left: 4px solid #414458; /* Tailwind gray-600 */
+  color: #e5e7eb; /* Tailwind gray-300 */
+  background-color: #1f202a; /* Slight background for quotes */
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown code {
+  background-color: transparent; /* Tailwind gray-800 for inline code */
+  border-radius: 0.25rem; /* Rounded corners */
+  color: #f8fafc; /* Light text for inline code */
+}
+
+.markdown pre {
+  background-color: #1f202a !important;
+  color: #f8fafc;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .markdown {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .markdown h1 {
+    font-size: 1.4rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.1rem;
+  }
+
+  .markdown h3 {
+    font-size: 0.9rem;
+  }
+
+  .markdown blockquote {
+    padding-left: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .markdown {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+
+  .markdown h1 {
+    font-size: 1.2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1rem;
+  }
+
+  .markdown h3 {
+    font-size: 0.85rem;
+  }
+
+  .markdown p {
+    font-size: 0.75rem;
+  }
+
+  .markdown blockquote {
+    padding-left: 0.75rem;
+  }
+}
