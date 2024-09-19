@@ -1,12 +1,10 @@
 ---
 interface Props{
 	id: string
-	title?: string
 }
-const {id, title} = Astro.props;
+const {id} = Astro.props;
 ---
 
 <article id={id} class="w-full h-fit px-5 text-sm">
-    <h3 class="text-2xl font-mono font-bold uppercase">{title || "No title"}</h3>
 	<slot/>
 </article>

@@ -5,7 +5,7 @@ const data = await getEntry("home", "project")!
 const {Content} = await data.render();
 import Markdown from "../../../core/components/Markdown.astro"
 ---
-<Articles id="AboutThisProject" title={data.data.title}>
+<Articles id="AboutThisProject">
     <Markdown>
         <Content/>
     </Markdown>

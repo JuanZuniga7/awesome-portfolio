@@ -9,6 +9,10 @@ export default {
                                 'tertiary': '#414458',
                         }
                 },
+                screens: {
+                        xs: "300px",
+                        "3xl": "1920px"
+                }
         },
         plugins: [],
 }

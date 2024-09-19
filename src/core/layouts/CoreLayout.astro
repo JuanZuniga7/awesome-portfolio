@@ -21,13 +21,13 @@ const { title, lang } = Astro.props;
     <ViewTransitions />
   </head>
   <body
-    class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center p-6"
+    class="bg-primary w-dvw min-h-dvh overflow-x-hidden overflow-y-auto flex justify-center xs:p-2 p-6"
   >
-    <div class="w-[70%] grid grid-cols-4 h-fit gap-10 text-white">
+    <div class="xs:w-full w-[70%] grid grid-cols-4 h-fit gap-10 text-white">
       <Aside>
         <slot name="aside" />
       </Aside>
-      <main class="col-span-3 flex flex-col items-center gap-10">
+      <main class="xs:col-span-4 col-span-3 flex flex-col items-center gap-10">
         <slot />
         <Footer />
       </main>

@@ -2,86 +2,93 @@
 
 ---
 
-<div class="font-mono markdown">
-    <slot />
+<div class="font-mono markdown px-2">
+  <slot />
 </div>
 <style is:inline>
-    /* Base styles for Markdown elements in dark theme */
-.markdown {
+  /* Base styles for Markdown elements in dark theme */
+  .markdown {
     line-height: 1.6; /* Improve readability */
     font-size: 1rem; /* Adjust font size as needed */
     color: #e0e0e0; /* Light text color for dark background */
-}
+  }
 
-.markdown h1, .markdown h2, .markdown h3 {
+  .markdown h1,
+  .markdown h2,
+  .markdown h3 {
     font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     color: #f0f0f0; /* Lighter headings */
-}
+  }
 
-.markdown h1 {
+  .markdown h1 {
     font-size: 1.5rem; /* Adjust h1 size */
-}
+  }
 
-.markdown h2 {
-    font-size: 1.3rem; /* Adjust h2 size */
-}
+  .markdown h2 {
+    font-size: 1.2rem; /* Adjust h2 size */
+  }
 
-.markdown h3 {
-    font-size: 1.2rem; /* Adjust h3 size */
-}
+  .markdown h3 {
+    font-size: 1rem; /* Adjust h3 size */
+  }
 
-.markdown p {
-    margin-bottom: 1rem; /* Space between paragraphs */
-}
+  .markdown p {
+    margin-bottom: 0.8rem; /* Space between paragraphs */
+  }
 
-.markdown ul, .markdown ol {
+  .markdown em{
+    color: #3b82f6;
+  }
+
+  .markdown ul,
+  .markdown ol {
     margin-left: 1.5rem; /* Indent lists */
     margin-bottom: 1rem; /* Space below lists */
-}
+  }
 
-.markdown li {
+  .markdown li {
     margin-bottom: 0.5rem; /* Space between list items */
     list-style-type: disc;
-}
+  }
 
-.markdown li::marker{
+  .markdown li::marker {
     color: #4f46e5;
-}
+  }
 
-.markdown a {
+  .markdown a {
     color: #3b82f6; /* Tailwind blue-500 for dark mode */
     text-decoration: underline;
-}
+  }
 
-.markdown a:hover {
+  .markdown a:hover {
     text-decoration: none; /* Remove underline on hover */
-}
+  }
 
-.markdown blockquote {
+  .markdown blockquote {
     border-left: 4px solid #414458; /* Tailwind gray-600 */
     color: #e5e7eb; /* Tailwind gray-300 */
-    background-color: #1F202A; /* Slight background for quotes */
+    background-color: #1f202a; /* Slight background for quotes */
     padding-left: 1rem;
     padding-top: 1rem;
     padding-bottom: 0.1rem;
     margin-bottom: 1rem;
-}
+  }
 
-.markdown code {
+  .markdown code {
     background-color: transparent; /* Tailwind gray-800 for inline code */
     border-radius: 0.25rem; /* Rounded corners */
     color: #f8fafc; /* Light text for inline code */
-}
+  }
 
-.markdown pre {
-    background-color: #1F202A;
-    color: #f8fafc; /* Light text for code blocks */
-    border-radius: 0.5rem; /* Rounded corners */
-    overflow-x: auto; /* Enable horizontal scrolling */
+  .markdown pre {
+    background-color: #1f202a !important;
+    color: #f8fafc; 
+    border-radius: 0.5rem; 
+    overflow-x: auto; 
     margin-bottom: 1rem;
     padding: 1rem;
-}
+  }
 
 </style>
