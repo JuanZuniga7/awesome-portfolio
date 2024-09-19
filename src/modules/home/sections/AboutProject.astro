@@ -1,8 +1,12 @@
 ---
 import Articles from "../components/Articles.astro"
-import { getCollection } from "astro:content";
-const article = await getCollection("home");
-const data = article.find((item) => item.data.title === "About This Project")
+import { getEntry } from "astro:content";
+const data = await getEntry("home", "project")!
+const {Content} = await data.render();
+import Markdown from "../../../core/components/Markdown.astro"
 ---
-<Articles id="AboutThisProject" title={data?.data.title}>
+<Articles id="AboutThisProject" title={data.data.title}>
+    <Markdown>
+        <Content/>
+    </Markdown>
 </Articles>

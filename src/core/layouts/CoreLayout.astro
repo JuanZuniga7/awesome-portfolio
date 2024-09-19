@@ -9,7 +9,6 @@ interface Props {
 }
 const { title, lang } = Astro.props;
 ---
-
 <!doctype html>
 <html lang={lang}>
   <head>
@@ -36,8 +35,8 @@ const { title, lang } = Astro.props;
     </div>
   </body>
 </html>
-<style>
+<style is:global>
   html {
     scroll-behavior: smooth;
-  } 
+  }
 </style>
