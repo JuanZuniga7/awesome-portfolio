@@ -20,7 +20,7 @@ This version is one of many developed in the pursuit of the ideal balance betwee
 In this project, various approaches were taken to adhere to SOLID principles as needed. This is the only version of the portfolio that includes testing, aligning with the teachings in *Clean Code by Robert C. Martin.* 
 As the book states:
 
-> Code without tests is not clean code. You can’t refactor without tests. If you can’t refactor, you can’t clean the code."
+> Code without tests is not clean code. You can’t refactor without tests. If you can’t refactor, you can’t clean the code.
 
 It’s possible that other design patterns were implemented subconsciously; however, one thing is certain—if they were applied, it was because they were entirely necessary.
 
